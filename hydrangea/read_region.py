@@ -129,7 +129,7 @@ class ReadRegion(ReaderBase):
                  load_full=False, join_threshold=100, bridge_threshold=100,
                  bridge_gap=0.5):
 
-        stime = time.clock()
+        stime = time.perf_counter()
 
         # Store 'simple' parameters in internal variables
         self.file_name = file_name
@@ -197,7 +197,7 @@ class ReadRegion(ReaderBase):
             return
 
         self._print(1, "Region setup took {:.3f} sec."
-                    .format(time.clock()-stime))
+                    .format(time.perf_counter()-stime))
         self._print(1, "Selection region contains {:d} cells, {:d} segments, "
                     "{:d} particles, {:d} files"
                     .format(self.num_cells, self.num_segments,

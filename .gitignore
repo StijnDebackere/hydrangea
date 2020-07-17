@@ -6,6 +6,12 @@
 *.so
 *.o
 
-__pycache__
 dist
 hydrangea.egg-info
+.DS_Store
+*.pyc
+**/.DS_Store
+.mypy_cache/
+**/.mypy_cache/
+__pychache__/
+**/__pychache__/
